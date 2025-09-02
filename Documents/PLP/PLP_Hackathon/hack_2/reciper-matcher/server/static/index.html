@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe Matcher</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Login Modal -->
+<div class="modal" id="loginModal">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-dialog">
+    <button class="modal-close" data-close>×</button>
+    <h3>Login</h3>
+    <form id="loginForm">
+      <div class="form-row">
+        <label>Email</label>
+        <input name="email" type="email" required>
+      </div>
+      <div class="form-row">
+        <label>Password</label>
+        <input name="password" type="password" required>
+      </div>
+      <button class="btn btn-primary" type="submit" style="width:100%">Login</button>
+    </form>
+  </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div class="modal" id="signupModal">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-dialog">
+    <button class="modal-close" data-close>×</button>
+    <h3>Create an account</h3>
+    <form id="signupForm">
+      <div class="form-row">
+        <label>Name</label>
+        <input name="name" type="text" required>
+      </div>
+      <div class="form-row">
+        <label>Email</label>
+        <input name="email" type="email" required>
+      </div>
+      <div class="form-row">
+        <label>Password</label>
+        <input name="password" type="password" required>
+      </div>
+      <button class="btn btn-primary" type="submit" style="width:100%">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+
+  <!-- Header -->
+  <header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/">
+      <span class="brand-badge">🍲</span>
+      <span class="brand-text">Recipe Matcher</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false"
+            aria-controls="primaryNav" aria-label="Toggle menu">☰</button>
+
+    <nav id="primaryNav" class="nav-links">
+      <a href="#">Home</a>
+      <a href="#recipes">Recipes</a>
+      <a href="#impact">Impact</a>
+    </nav>
+
+    <div class="auth">
+      <button class="btn btn-ghost" data-open="loginModal">Login</button>
+      <button class="btn btn-primary" data-open="signupModal">Sign Up</button>
+
+    </div>
+  </div>
+</header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <p class="trust">⭐ Trusted by home cooks worldwide</p>
+      <h1>Turn Your Ingredients Into <span class="grad">Delicious Recipes</span></h1>
+      <p class="sub">Tell us what’s in your kitchen and get fast, simple ideas you can actually cook.</p>
+      <a href="#builder" class="btn btn-primary btn-lg">Pick Your Ingredients →</a>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div><h3>10,000+</h3><p>Recipes Indexed</p></div>
+      <div><h3>30 sec</h3><p>Avg. Match Time</p></div>
+      <div><h3>98%</h3><p>User Satisfaction</p></div>
+    </div>
+  </section>
+
+  <!-- Ingredient Builder -->
+  <section class="builder" id="builder">
+    <div class="container">
+      <h2>What’s in your kitchen?</h2>
+      <p class="muted">Type an ingredient and press Enter, or tap a suggestion below.</p>
+
+      <div class="card input-card">
+        <div class="input-wrap">
+          <span class="input-icon">🔎</span>
+          <input id="ingredientInput" type="text" placeholder="e.g., chicken, tomatoes, pasta…" aria-label="Add ingredient" />
+        </div>
+
+        <div class="group">
+          <p class="group-title">Popular:</p>
+          <div id="suggestions" class="chips"></div>
+        </div>
+
+        <div class="group">
+          <p class="group-title">Selected:</p>
+          <div id="selected" class="chips selected-chips" aria-live="polite"></div>
+        </div>
+
+        <button id="generateBtn" class="btn btn-primary btn-xl" disabled>
+          Generate Recipes (0)
+        </button>
+        <p id="limitNote" class="note hidden">Max 10 ingredients.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="recipes" id="recipes">
+    <div class="container">
+      <h2>Recipe Matches</h2>
+      <p class="muted">We’ll show three ideas based on your ingredients.</p>
+
+      <div id="recipeGrid" class="recipe-grid">
+        <!-- JS injects skeletons and cards here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Saved Recipes -->
+  <section class="recipes" id="saved">
+  <div class="container">
+    <h2>Saved Recipes</h2>
+    <p class="muted">Your saved ideas live here.</p>
+    <div style="margin:10px 0;">
+      <button id="loadSavedBtn" class="btn btn-ghost">Load Saved</button>
+    </div>
+    <div id="savedGrid" class="recipe-grid"></div>
+  </div>
+</section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-inner">
+      <h2>Ready to cook smarter?</h2>
+      <p>Save your favorite matches and build a meal plan in minutes.</p>
+      <a class="btn btn-primary btn-lg" href="#">Get Started Free →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="impact">
+    <div class="container footer-grid">
+      <div>
+        <h4>Recipe Matcher</h4>
+        <p>Making cooking simple, one ingredient at a time.</p>
+      </div>
+      <div>
+        <h4>Features</h4>
+        <ul>
+          <li>Ingredient Matching</li>
+          <li>Smart Suggestions</li>
+          <li>Meal Planning</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li>Help Center</li>
+          <li>Contact</li>
+          <li>Feedback</li>
+        </ul>
+      </div>
+      <div>
+        <h4>SDG Impact</h4>
+        <p>Aligned with SDG 2 (Zero Hunger): reduce food waste by cooking with what you have.</p>
+      </div>
+    </div>
+    <div class="container copyright">© 2025 Recipe Matcher</div>
+  </footer>
+
+<!-- Modals START -->
+<div id="loginModal" class="modal">…</div>
+<div id="signupModal" class="modal">…</div>
+<!-- Modals END -->
+
+  <script src="app.js"></script>
+</body>
+</html>
