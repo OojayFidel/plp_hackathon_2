@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Jonathan [Surname]</title>
+    <meta name="description" content="A collection of projects by Jonathan [Surname].">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Jonathan [Surname]</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="bio.html" class="nav-link">Bio</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="elevator-pitch.html" class="nav-link">Elevator Pitch</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="portfolio-section">
+            <div class="container">
+                <h1 class="page-title">Portfolio</h1>
+                <p class="page-subtitle">A selection of my work. Use the filters to navigate through different categories.</p>
+                
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="social">Social Media</button>
+                    <button class="filter-btn" data-filter="tech">Tech</button>
+                    <button class="filter-btn" data-filter="real-estate">Real Estate</button>
+                    <button class="filter-btn" data-filter="fashion">Fashion</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <article class="card project-card" data-category="social">
+                        <img src="https://via.placeholder.com/400x250/C3B091/2B1D13?text=Project" alt="Project image">
+                        <h3>Taco ’Bout It Event Reel</h3>
+                        <p>Event promotion video for a catering business.</p>
+                        <div class="project-tags"><span class="tag">Social Media</span></div>
+                        <div class="project-links">
+                            <button class="btn btn-secondary modal-trigger" data-modal-id="modal-project-1">Details</button>
+                            <a href="#" class="btn btn-outline">Live Link &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="card project-card" data-category="tech">
+                        <img src="https://via.placeholder.com/400x250/C3B091/2B1D13?text=Project" alt="Project image">
+                        <h3>NKJV Quiz Engine</h3>
+                        <p>CLI-based quiz application in Python.</p>
+                        <div class="project-tags"><span class="tag">Tech</span></div>
+                        <div class="project-links">
+                             <button class="btn btn-secondary modal-trigger" data-modal-id="modal-project-2">Details</button>
+                            <a href="#" class="btn btn-outline">View Code &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="card project-card" data-category="social">
+                        <img src="https://via.placeholder.com/400x250/C3B091/2B1D13?text=Project" alt="Project image">
+                        <h3>Empowered Capital LinkedIn</h3>
+                        <p>Complete social strategy revamp for a financial firm.</p>
+                        <div class="project-tags"><span class="tag">Social Media</span></div>
+                        <div class="project-links">
+                             <button class="btn btn-secondary modal-trigger" data-modal-id="modal-project-3">Details</button>
+                            <a href="#" class="btn btn-outline">Live Link &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="card project-card" data-category="real-estate">
+                        <img src="https://via.placeholder.com/400x250/C3B091/2B1D13?text=Project" alt="Project image">
+                        <h3>Real Estate Market Carousel</h3>
+                        <p>Data-driven Instagram carousel for Santa Clara market.</p>
+                        <div class="project-tags"><span class="tag">Real Estate</span><span class="tag">Social Media</span></div>
+                        <div class="project-links">
+                             <button class="btn btn-secondary">Details</button>
+                            <a href="#" class="btn btn-outline">Live Link &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="card project-card" data-category="fashion">
+                        <img src="https://via.placeholder.com/400x250/C3B091/2B1D13?text=Project" alt="Project image">
+                        <h3>Fashion Night Sale Rescue</h3>
+                        <p>Last-minute video edit that rescued a failing sale event.</p>
+                        <div class="project-tags"><span class="tag">Fashion</span><span class="tag">Social Media</span></div>
+                        <div class="project-links">
+                             <button class="btn btn-secondary">Details</button>
+                            <a href="#" class="btn btn-outline">Live Link &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="card project-card" data-category="tech">
+                        <img src="https://via.placeholder.com/400x250/C3B091/2B1D13?text=Project" alt="Project image">
+                        <h3>Streamlit Tutor Prototype</h3>
+                        <p>An interactive AI tutor prototype built with Python.</p>
+                        <div class="project-tags"><span class="tag">Tech</span></div>
+                        <div class="project-links">
+                             <button class="btn btn-secondary">Details</button>
+                            <a href="#" class="btn btn-outline">View Code &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        </footer>
+    
+    <div id="modal-project-1" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-1" hidden> </div>
+    <div id="modal-project-2" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-2" hidden> </div>
+    <div id="modal-project-3" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-3" hidden> </div>
+
+
+    <button id="back-to-top" title="Go to top" hidden>&uarr;</button>
+    <div id="toast-container"></div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

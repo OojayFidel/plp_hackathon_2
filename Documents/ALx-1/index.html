@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Odey | Social Media Manager & Aspiring Engineer</title>
+    <meta name="description" content="Personal website for Jonathan, a Social Media Manager and aspiring Backend/AI Engineer.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Jonathan Odey</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="bio.html" class="nav-link">Bio</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="elevator-pitch.html" class="nav-link">Elevator Pitch</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Jonathan Odey</h1>
+                <p class="hero-tagline">Social Media Manager &bull; Aspiring Backend/AI Engineer</p>
+                <div class="hero-cta">
+                    <a href="portfolio.html" class="btn btn-primary">See Portfolio</a>
+                    <a href="assets/docs/resume.pdf" class="btn btn-secondary" download>Download Résumé</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-cards-section">
+            <div class="container">
+                <div class="card-grid">
+                    <a href="bio.html" class="card">
+                        <h3>About Me</h3>
+                        <p>Discover my professional journey, skills, and the story behind my work.</p>
+                        <span class="card-link">View Bio</span>
+                    </a>
+                    <a href="portfolio.html" class="card">
+                        <h3>My Work</h3>
+                        <p>Explore a curated selection of projects that showcase my expertise.</p>
+                        <span class="card-link">View Portfolio</span>
+                    </a>
+                    <a href="elevator-pitch.html" class="card">
+                        <h3>Elevator Pitch</h3>
+                        <p>Hear my vision and value proposition in a quick, compelling format.</p>
+                        <span class="card-link">Watch Pitch</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <div class="container">
+                <h2 class="section-title">Core Skills</h2>
+                <div class="skills-container">
+                    <span class="skill-pill">Social Media Strategy</span>
+                    <span class="skill-pill">Content Creation</span>
+                    <span class="skill-pill">Community Management</span>
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">JavaScript</span>
+                    <span class="skill-pill">SQL</span>
+                    <span class="skill-pill">API Development</span>
+                    <span class="skill-pill">Data Analysis</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-projects-section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="card-grid">
+                    <article class="card project-card">
+                        <img src="assets/img/tbi-logo.png" alt="Placeholder for Taco 'Bout It Event Reel project." class="card-image">
+                        <h3>Taco ’Bout It Event Reel</h3>
+                        <p>A dynamic social media reel capturing the energy of a local food event.</p>
+                        <button class="btn btn-secondary modal-trigger" data-modal-id="modal-project-1">View Details</button>
+                    </article>
+                    <article class="card project-card">
+                        <img src="https://via.placeholder.com/400x250/C3B091/2B1D13?text=Project+2" alt="Placeholder for NKJV Quiz Engine project." class="card-image">
+                        <h3>NKJV Quiz Engine</h3>
+                        <p>A Python-based quiz application for learning and engagement.</p>
+                        <button class="btn btn-secondary modal-trigger" data-modal-id="modal-project-2">View Details</button>
+                    </article>
+                    <article class="card project-card">
+                        <img src="assets/img/els-logo.jpg" alt="Placeholder for Empowered Capital LinkedIn Revamp project." class="card-image">
+                        <h3>Empowered Capital LinkedIn Revamp</h3>
+                        <p>Complete overhaul of a financial firm's LinkedIn presence, boosting engagement by 300%.</p>
+                        <button class="btn btn-secondary modal-trigger" data-modal-id="modal-project-3">View Details</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-form">
+                    <h3>Get in Touch</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="footer-links">
+                    <h3>Connect</h3>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="mailto:email@example.com" class="social-link">Email</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jonathan [Surname]. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal-project-1" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-1" hidden>
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <h3 id="modal-title-1">Taco ’Bout It Event Reel</h3>
+            <p>This project involved on-site videography, editing, and crafting a high-energy promotional video for social media. The reel achieved over 50,000 organic views on Instagram and drove a 40% increase in ticket sales for the next event.</p>
+            <ul>
+                <li><strong>Role:</strong> Videographer, Editor, Social Strategist</li>
+                <li><strong>Tools:</strong> Adobe Premiere Pro, CapCut</li>
+                <li><strong>Impact:</strong> 50k+ views, 40% sales lift</li>
+            </ul>
+        </div>
+    </div>
+    <div id="modal-project-2" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-2" hidden>
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <h3 id="modal-title-2">NKJV Quiz Engine</h3>
+            <p>A command-line application built with Python that pulls questions from a local database, tracks user scores, and provides feedback. This was an early project to solidify my understanding of data structures and control flow.</p>
+             <ul>
+                <li><strong>Role:</strong> Developer</li>
+                <li><strong>Tech:</strong> Python, SQLite</li>
+                <li><strong>Status:</strong> Personal Project</li>
+            </ul>
+        </div>
+    </div>
+    <div id="modal-project-3" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-3" hidden>
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <h3 id="modal-title-3">Empowered Capital LinkedIn Revamp</h3>
+            <p>Led a full content strategy and execution overhaul for a financial services company. This included creating a new content calendar, designing branded templates, writing copy, and managing community engagement, resulting in a measurable boost in follower growth and lead quality.</p>
+             <ul>
+                <li><strong>Role:</strong> Social Media Manager</li>
+                <li><strong>Tools:</strong> Canva, Buffer, LinkedIn Analytics</li>
+                <li><strong>Impact:</strong> 300% engagement increase</li>
+            </ul>
+        </div>
+    </div>
+
+    <button id="back-to-top" title="Go to top" hidden>&uarr;</button>
+
+    <div id="toast-container"></div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
